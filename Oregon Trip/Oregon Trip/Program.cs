@@ -91,7 +91,11 @@ namespace Oregon_Trip
             Gas.set_shit("You have run out of gas, luckily your knowledge of science or whatever allows you to hastily create some fuel using fast food bags, a megaphone, and a full tank of gas you found on the side of the road.", "You have run out of gas on the side of the road, and have to wait an hour in the hot sun for roadside assistance to show up. They really marked up the price for Aloe.", "", "", gasarray, gasstatchange);
             //=======
             int[] req1 = new int[6] { 0, 0, 0, 0, 4, 0 };
-            int[] req2 = new int[6] { 0, 0, 0, 0, 0, 0 };
+            int[] req2 = new int[6] { 0, 0, 0, 0, 0, 4 };
+            int[] change1 = new int[6] { 2500, 0, 0, 0, 0, 0 };
+            Event Deaddrop = new Event()
+            Deaddrop.s
+
 
 
 
@@ -121,15 +125,18 @@ namespace Oregon_Trip
         int[] stat_change = new int[6];
         bool has_choices;
 
-        public void set_shit(string start_str, string missed_str, string fail_str, string end_str, int[] stat_req, int[] stat_change, bool has_choices = false)
+        public void set(int[] req1, int[] change1, string success, string fail, int[] req2 = null, int[] change2 = null, string alt1 = null, int[] req3 = null, int[] change3 = null, string alt2 = null)
         {
-            this.start_str = start_str;
-            this.missed_str = missed_str;
-            this.fail_str = fail_str;
-            this.end_str = end_str;
-            this.stat_req = stat_req;
-            this.stat_change = stat_change;
-            this.has_choices = has_choices;
+            this.req1 = req1;
+            this.change1 = change1;
+            this.success = success;
+            this.fail = fail;
+            this.req2 = req2;
+            this.change2 = change2;
+            this.alt1 = alt1;
+            this.req3 = req3;
+            this.change3 = change3;
+            this.alt2 = alt2;
         }
         public void get_shit(string request)
         {

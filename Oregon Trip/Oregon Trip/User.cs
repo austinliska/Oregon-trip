@@ -11,7 +11,7 @@ public class User
 	public User()
 	{
         int num;
-        console.writeLine("/nSelect your class /n 1. Jock /n 2. Cheerleader /n 3. Nerd /n 4. Metalhead /n 5.Stoner");
+        Console.writeLine("/nSelect your class /n 1. Jock /n 2. Cheerleader /n 3. Nerd /n 4. Metalhead /n 5.Stoner");
         num = Convert.ToInt32(Console.ReadLine());
         if (num == 1)
         {
