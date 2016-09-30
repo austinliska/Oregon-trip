@@ -8,7 +8,7 @@ namespace Oregon_Trip
 {
     class Driver1
     {
-        public Driver(Event theEvent)
+        public void Driver(Event theEvent)
         /*
         Function requires an int array of all stat requirements, an int array of the positive and negative changes to all stats
         Optional - the amount of money to start
