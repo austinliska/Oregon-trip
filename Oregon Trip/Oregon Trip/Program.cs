@@ -18,7 +18,7 @@ namespace Oregon_Trip
             int[] leprechaunarray = new int[6] { 0, 0, 0, 0, 4, 0 };
             int[] leprechaunstatchange = new int[6] { 0, 0, 0, 0, 0, 1 };
             Event Leprechaun = new Event();
-            Leprechaun.set_shit("OMFG! You just noticed a leprechaun on the dashboard rocking out to “We Built This On Rock and Roll” you were quick enough to catch it and it gave you a lucky coin as a reward!", "You get the feeling you just missed out on something big, but whatevs, crank the tunes!", "", "", leprechaunarray, leprechaunstatchange);
+            Leprechaun.set_shit(leprechaunarray, leprechaunstatchange,"OMFG! You just noticed a leprechaun on the dashboard rocking out to “We Built This On Rock and Roll” you were quick enough to catch it and it gave you a lucky coin as a reward!", "You get the feeling you just missed out on something big, but whatevs, crank the tunes!");
 
             int[] rideinstylearray = new int[6] { 0, 0, 4, 0, 0, 5 };
             int[] rideinstylestatchange = new int[6] { 0, 0, 0, 0, 0, 0 };
@@ -32,8 +32,10 @@ namespace Oregon_Trip
 
             int[] dysenteryarray = new int[6] { 0, 4, 0, 0, 2, 0 };
             int[] dysenterystatchange = new int[6] { 0, -1, -1, -1, 0, 0 };
+            int[] none = new int[6] { 0, 0, 0, 0, 0, 0 };
+            int[] doctorsfee = new int[6] {-2000,0,0,0,0,0}; 
             Event Dysentery = new Event();
-            Dysentery.set_shit("Your bro Steve got a case of Dysentery from some gas station sushi, luckily you were able to cure it with science or whatever.", "Steve almost died from dysentery and gave it to you! Nasty", "", "", dysenteryarray, dysenterystatchange);
+            Dysentery.set_shit(dysenteryarray, dysenterystatchange, "Your bro Steve got a case of Dysentery from some gas station sushi, luckily you were able to cure it with science or whatever.", "Steve almost died from dysentery and gave it to you! Nasty", doctorsfee, "Your bro Steve almost died of Dysentery, you had to pay a doctor mucho dinero to get that fixed, not to mention reupholstering the passenger seat, ugh.");
 
             int[] mirrorarray = new int[6] { 0, 3, 0, 0, 0, 0 };
             int[] mirrorstatchange = new int[6] { 0, 0, 0, 0, 0, -1 };
@@ -89,12 +91,14 @@ namespace Oregon_Trip
             int[] gasstatchange = new int[6] { -200, 0, 0, 0, 0, 0 };
             Event Gas = new Event();
             Gas.set_shit("You have run out of gas, luckily your knowledge of science or whatever allows you to hastily create some fuel using fast food bags, a megaphone, and a full tank of gas you found on the side of the road.", "You have run out of gas on the side of the road, and have to wait an hour in the hot sun for roadside assistance to show up. They really marked up the price for Aloe.", "", "", gasarray, gasstatchange);
-            //=======
+            //=======//
             int[] req1 = new int[6] { 0, 0, 0, 0, 4, 0 };
             int[] req2 = new int[6] { 0, 0, 0, 0, 0, 4 };
-            int[] change1 = new int[6] { 2500, 0, 0, 0, 0, 0 };
-            Event Deaddrop = new Event()
-            Deaddrop.s
+            int[] change2 = new int[6] { 2500, 0, 0, 0, 0, 0 };
+            Event Deaddrop = new Event();
+            Deaddrop.set(req1, null, "You needed to pull over and take a leak on the side of the road. While making shapes in the ground with wizz, your stream trickled over a black suitcase. Upon opening the case you find out it’s a dead drop filled with cash. Take the money?", "You needed to pull over and take a leak on the side of the road. You make shapes in the ground with your pee before getting back in the car. That sure was fun.", req2, change2, "You take the money from the suitcase and drive off without even batting an eye.", req3, change3, "You go to grab the money when suddenly a black SUV pulls up beside your car. Two men with guns step out and shoot you on the spot. Good try kid.");
+
+
 
 
 
@@ -138,17 +142,9 @@ namespace Oregon_Trip
             this.change3 = change3;
             this.alt2 = alt2;
         }
-        public void get_shit(string request)
-        {
-            if (request == start_str)
-            {
-
-            }
         }
+<<<<<<< HEAD
     }
+=======
 
-    
-
-
-
-}
+>>>>>>> origin/master
