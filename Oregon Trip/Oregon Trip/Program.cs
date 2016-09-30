@@ -109,18 +109,21 @@ namespace Oregon_Trip
 <<<<<<< HEAD
             Gas.set("You have run out of gas, luckily your knowledge of science or whatever allows you to hastily create some fuel using fast food bags, a megaphone, and a full tank of gas you found on the side of the road.", "You have run out of gas on the side of the road, and have to wait an hour in the hot sun for roadside assistance to show up. They really marked up the price for Aloe.", "", "", gasarray, gasstatchange);
 
-            Event StoryTime = new Event();
-            int[] StoryTimeReq = new int[6] { 0, 0, 0, 0, 0, 4 };
-            int[] StoryTimeChange = new int[6] { 0, 0, 0, 0, 0, -1 };
-            StoryTime.set("The car has been quiet for some time now, and everyone seems a bit bored. To help liven things up you tell an embarrassing story from your past. It brings the conversation back to life and every is a little happier.", "The car has been quiet for some time now, and everyone seems a bit bored. To help liven things up you tell an embarrassing story from your past. No one seems to like it or even react at all. Now there's an awkward silence filling the car.", "", "", StoryTimeReq, StoryTimeChange, false);
-=======
+           
             Gas.set_shit("You have run out of gas, luckily your knowledge of science or whatever allows you to hastily create some fuel using fast food bags, a megaphone, and a full tank of gas you found on the side of the road.", "You have run out of gas on the side of the road, and have to wait an hour in the hot sun for roadside assistance to show up. They really marked up the price for Aloe.", "", "", gasarray, gasstatchange);
             //=======//
+
             int[] deadreq1 = new int[6] { 0, 0, 0, 0, 4, 0 };
             int[] deadreq2 = new int[6] { 0, 0, 0, 0, 0, 4 };
             int[] deadchange2 = new int[6] { 2500, 0, 0, 0, 0, 0 };
             Event Deaddrop = new Event();
             Deaddrop.set(deadreq1, null, "You needed to pull over and take a leak on the side of the road. While making shapes in the ground with wizz, your stream trickled over a black suitcase. Upon opening the case you find out it’s a dead drop filled with cash. Take the money?", "You needed to pull over and take a leak on the side of the road. You make shapes in the ground with your pee before getting back in the car. That sure was fun.", deadreq2, deadchange2, "You take the money from the suitcase and drive off without even batting an eye.",req3, change3, "You go to grab the money when suddenly a black SUV pulls up beside your car. Two men with guns step out and shoot you on the spot. Good try kid.");
+
+            int[] storyreq1 = new int[6] { 0, 0, 4, 0, 0, 0 };
+            int[] storychange1 = new int[6] { 0, 0, 1, 0, 0, 0 };
+            int[] storychange2 = new int[6] { 0, 0, -1, 0, 0, 0 };
+            Event StoryTime = new Event();
+            StoryTime.set(storyreq1, storychange1, "The car has been quiet for some time now, and everyone seems a bit bored. To help liven things up you tell an embarrassing story from your past. It brings the conversation back to life and every is a little happier.", "The car has been quiet for some time now, and everyone seems a bit bored. To help liven things up you tell an embarrassing story from your past. No one seems to like it or even react at all. Now there's an awkward silence filling the car.", req2, storychange2);
 
 
 
@@ -137,11 +140,11 @@ namespace Oregon_Trip
     }
     class Event
     {
-        string start_str; //started event, passed requirements
-        string missed_str; //insufficient stats
-        string fail_str; //failure by chance, not stats
-        string end_str; //success
-        int[] stat_req = new int[6]; /*
+        string success; //started event, passed requirements
+        string fail; //insufficient stats
+        string alt1; //failure by chance, not stats
+        string alt2; //success
+        int[] req1 = new int[6]; /*
                         Money 0
                         Intelligence 1
                         Charisma 2
@@ -151,8 +154,14 @@ namespace Oregon_Trip
                         [0,0,0,3,0,0] requires 3 strength, 0 all other stats
                          */
 
-        int[] stat_change = new int[6];
-        bool has_choices;
+        int[] req2 = new int[6];
+        int[] req3 = new int[6];
+        int[] change1 = new int[6];
+        int[] change2 = new int[6];
+        int[] change3 = new int[6];
+
+
+
 
         public void set(int[] req1, int[] change1, string success, string fail, int[] req2 = null, int[] change2 = null, string alt1 = null, int[] req3 = null, int[] change3 = null, string alt2 = null)
         {

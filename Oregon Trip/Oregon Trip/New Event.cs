@@ -14,12 +14,6 @@ namespace Oregon_Trip
     {
         static void NotMain(string[] args)
         {
-            Event StoryTime = new Event();
-            int[] StoryTimeReq = new int[6] { 0, 0, 4, 0, 0, 0 };
-            int[] StoryTimePass = new int[6] { 0, 0, 1, 0, 0, 0 };
-            int[] StoryTimeFail = new int[6] { 0, 0, -1, 0, 0, 0 };
-            StoryTime.set_shit("The car has been quiet for some time now, and everyone seems a bit bored. To help liven things up you tell an embarrassing story from your past. It brings the conversation back to life and every is a little happier.", "The car has been quiet for some time now, and everyone seems a bit bored. To help liven things up you tell an embarrassing story from your past. No one seems to like it or even react at all. Now there's an awkward silence filling the car.", "", "", StoryTimeReq, StoryTimePass, false);
-
             Event TvDistraction = new Event();
             int[] TvDistractionReq = new int[6] {0,0,0,0,3,0};
             int[] TVDistractionChange = new int[6] {0,0,0,0,0,1};
