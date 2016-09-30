@@ -15,6 +15,7 @@ namespace Oregon_Trip
     }
     class NewEvent
     {
+
         string success;
         string fail_str;
         string alt_str1;
@@ -34,7 +35,8 @@ namespace Oregon_Trip
         int[] alt_stat_change2 = new int[6];
         int[] alt_stat_Req2 = new int[6];
 
-        public void set(int[] Req1, int[] Change1, string Sucess, string Fail, int[] req2 = new int[6] , int[] Change2, string alt1, int[] Req3, int[] Change3, string alt2)
+
+        public void set(int[] Req1, int[] Change1, string Sucess, string Fail, int[] req2 = null, int[] Change2 = null, string alt1 = null, int[] Req3 = null, int[] Change3 = null, string alt2 = null)
         {
             this.Req1 = Req1;
             this.Change1 = Change1;
@@ -48,3 +50,5 @@ namespace Oregon_Trip
             this.alt2 = alt2;
         }
     }
+
+}
