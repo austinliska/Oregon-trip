@@ -131,4 +131,8 @@ namespace Oregon_Trip
             this.has_choices = has_choices;
         }
     }
+<<<<<<< HEAD
 }
+=======
+
+>>>>>>> origin/master
