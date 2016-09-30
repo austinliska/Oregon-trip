@@ -135,12 +135,7 @@ namespace Oregon_Trip
             this.stat_change = stat_change;
             this.has_choices = has_choices;
         }
-        public void get_shit(string request)
-        {
-            if (request == start_str)
-            {
-
-            }
+       
         }
     }
 
