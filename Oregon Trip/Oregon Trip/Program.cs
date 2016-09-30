@@ -89,14 +89,10 @@ namespace Oregon_Trip
             int[] gasstatchange = new int[6] { -200, 0, 0, 0, 0, 0 };
             Event Gas = new Event();
             Gas.set_shit("You have run out of gas, luckily your knowledge of science or whatever allows you to hastily create some fuel using fast food bags, a megaphone, and a full tank of gas you found on the side of the road.", "You have run out of gas on the side of the road, and have to wait an hour in the hot sun for roadside assistance to show up. They really marked up the price for Aloe.", "", "", gasarray, gasstatchange);
-=======
-            Event StoryTime = new Event();
-            int[] StoryTimeReq = new int[6] { 0, 0, 0, 0, 0, 4 };
-            int[] StoryTimeChange = new int[6] { 0, 0, 0, 0, 0, -1 };
-            StoryTime.set_shit("The car has been quiet for some time now, and everyone seems a bit bored. To help liven things up you tell an embarrassing story from your past. It brings the conversation back to life and every is a little happier.", "The car has been quiet for some time now, and everyone seems a bit bored. To help liven things up you tell an embarrassing story from your past. No one seems to like it or even react at all. Now there's an awkward silence filling the car.", "", "", StoryTimeReq, StoryTimeChange, false);
+            //=======
+            int[] req1 = new int[6] { 0, 0, 0, 0, 4, 0 };
+            int[] req2 = new int[6] { 0, 0, 0, 0, 0, 0 };
 
-            Event TvDistraction = new Event();
-            int[] T;
 
 
 
