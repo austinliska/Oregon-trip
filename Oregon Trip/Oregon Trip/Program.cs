@@ -12,28 +12,29 @@ namespace Oregon_Trip
 {
     class Program
     {
+        //public void set(int[] req1, int[] change1, string success, string fail, int[] req2 = null, int[] change2 = null, string alt1 = null, int[] req3 = null, int[] change3 = null, string alt2 = null)
         static void Main(string[] args)
         {
-<<<<<<< HEAD
             int[] leprechaunarray = new int[6] { 0, 0, 0, 0, 4, 0 };
             int[] leprechaunstatchange = new int[6] { 0, 0, 0, 0, 0, 1 };
-            Event Leprechaun = new Event();
-            Leprechaun.set_shit("OMFG! You just noticed a leprechaun on the dashboard rocking out to “We Built This On Rock and Roll” you were quick enough to catch it and it gave you a lucky coin as a reward!", "You get the feeling you just missed out on something big, but whatevs, crank the tunes!", "", "", leprechaunarray, leprechaunstatchange);
+            Class1 Leprechaun = new Event();
+            Leprechaun.set_shit(leprechaunarray, leprechaunstatchange,"OMFG! You just noticed a leprechaun on the dashboard rocking out to “We Built This On Rock and Roll” you were quick enough to catch it and it gave you a lucky coin as a reward!", "You get the feeling you just missed out on something big, but whatevs, crank the tunes!");
 
             int[] rideinstylearray = new int[6] { 0, 0, 4, 0, 0, 5 };
             int[] rideinstylestatchange = new int[6] { 0, 0, 0, 0, 0, 0 };
             Event RideInStyle = new Event();
-            RideInStyle.set_shit("While stopped at a gas station in the middle of nowhere, you notice that the band you were going to see is also stopped there. You approach them letting them know what big fans you guys are of the band. Charmed by your kind words, the band offers to let you ride with them all the way to Oregon! Rock on!", "You sense a disturbance in the force, as though you just missed out on the event of your life.", "", "", rideinstylearray, rideinstylestatchange);
+            RideInStyle.set_shit(rideinstylearray, rideinstylestatchange, "While stopped at a gas station in the middle of nowhere, you notice that the band you were going to see is also stopped there. You approach them letting them know what big fans you guys are of the band. Charmed by your kind words, the band offers to let you ride with them all the way to Oregon! Rock on!", "You sense a disturbance in the force, as though you just missed out on the event of your life.");
 
             int[] deerarray = new int[6] { 0, 0, 0, 0, 3, 0 };
             int[] deerstatchange = new int[6] { -500, 0, 0, 0, 0, 0 };
             Event Deer = new Event();
-            Deer.set_shit("A deer just sauntered into the road, but you were quick enough to avoid it. Keep on truckin’", "You just hit a deer, and man did you have to pay", "", "", deerarray, deerstatchange);
+            Deer.set_shit( deerarray, none, "A deer just sauntered into the road, but you were quick enough to avoid it. Keep on truckin’", "You just hit a deer, and with no money to fix the car, it looks like you're hitchhiking back.", deerstatchange, "You hit a deer! It was an accident, but you still feel bad. Not to mention the cost this is going to be for repairs.");
 
             int[] dysenteryarray = new int[6] { 0, 4, 0, 0, 2, 0 };
             int[] dysenterystatchange = new int[6] { 0, -1, -1, -1, 0, 0 };
+            int[] none = new int[6] { 0, 0, 0, 0, 0, 0 };
             Event Dysentery = new Event();
-            Dysentery.set_shit("Your bro Steve got a case of Dysentery from some gas station sushi, luckily you were able to cure it with science or whatever.", "Steve almost died from dysentery and gave it to you! Nasty", "", "", dysenteryarray, dysenterystatchange);
+            Dysentery.set_shit(dysenteryarray, none, "Your bro Steve got a case of Dysentery from some gas station sushi, luckily you were able to cure it with science or whatever.", "Steve almost died from dysentery and gave it to you! Nasty", "", "");
 
             int[] mirrorarray = new int[6] { 0, 3, 0, 0, 0, 0 };
             int[] mirrorstatchange = new int[6] { 0, 0, 0, 0, 0, -1 };
@@ -89,7 +90,7 @@ namespace Oregon_Trip
             int[] gasstatchange = new int[6] { -200, 0, 0, 0, 0, 0 };
             Event Gas = new Event();
             Gas.set_shit("You have run out of gas, luckily your knowledge of science or whatever allows you to hastily create some fuel using fast food bags, a megaphone, and a full tank of gas you found on the side of the road.", "You have run out of gas on the side of the road, and have to wait an hour in the hot sun for roadside assistance to show up. They really marked up the price for Aloe.", "", "", gasarray, gasstatchange);
-=======
+
             Event StoryTime = new Event();
             int[] StoryTimeReq = new int[6] { 0, 0, 0, 0, 0, 4 };
             int[] StoryTimeChange = new int[6] { 0, 0, 0, 0, 0, -1 };
@@ -97,13 +98,6 @@ namespace Oregon_Trip
 
             Event TvDistraction = new Event();
             int[] T;
-
-
-
-
-
-
->>>>>>> origin/master
         }
     }
     class Event
