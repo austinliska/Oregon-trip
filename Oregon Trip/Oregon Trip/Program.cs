@@ -18,7 +18,7 @@ namespace Oregon_Trip
             int[] leprechaunarray = new int[6] { 0, 0, 0, 0, 4, 0 };
             int[] leprechaunstatchange = new int[6] { 0, 0, 0, 0, 0, 1 };
             Event Leprechaun = new Event();
-            Leprechaun.set_shit(leprechaunarray, leprechaunstatchange,"OMFG! You just noticed a leprechaun on the dashboard rocking out to “We Built This On Rock and Roll” you were quick enough to catch it and it gave you a lucky coin as a reward!", "You get the feeling you just missed out on something big, but whatevs, crank the tunes!");
+            Leprechaun.set_shit(leprechaunarray, leprechaunstatchange, "OMFG! You just noticed a leprechaun on the dashboard rocking out to “We Built This On Rock and Roll” you were quick enough to catch it and it gave you a lucky coin as a reward!", "You get the feeling you just missed out on something big, but whatevs, crank the tunes!");
 
             int[] rideinstylearray = new int[6] { 0, 0, 4, 0, 0, 5 };
             int[] rideinstylestatchange = new int[6] { 0, 0, 0, 0, 0, 0 };
@@ -28,12 +28,12 @@ namespace Oregon_Trip
             int[] deerarray = new int[6] { 0, 0, 0, 0, 3, 0 };
             int[] deerstatchange = new int[6] { -500, 0, 0, 0, 0, 0 };
             Event Deer = new Event();
-            Deer.set_shit( deerarray, none, "A deer just sauntered into the road, but you were quick enough to avoid it. Keep on truckin’", "You just hit a deer, and with no money to fix the car, it looks like you're hitchhiking back.", deerstatchange, "You hit a deer! It was an accident, but you still feel bad. Not to mention the cost this is going to be for repairs.");
+            Deer.set_shit(deerarray, none, "A deer just sauntered into the road, but you were quick enough to avoid it. Keep on truckin’", "You just hit a deer, and with no money to fix the car, it looks like you're hitchhiking back.", deerstatchange, "You hit a deer! It was an accident, but you still feel bad. Not to mention the cost this is going to be for repairs.");
 
             int[] dysenteryarray = new int[6] { 0, 4, 0, 0, 2, 0 };
             int[] dysenterystatchange = new int[6] { 0, -1, -1, -1, 0, 0 };
             int[] none = new int[6] { 0, 0, 0, 0, 0, 0 };
-            int[] doctorsfee = new int[6] {-2000,0,0,0,0,0}; 
+            int[] doctorsfee = new int[6] { -2000, 0, 0, 0, 0, 0 };
             Event Dysentery = new Event();
             Dysentery.set_shit(dysenteryarray, dysenterystatchange, "Your bro Steve got a case of Dysentery from some gas station sushi, luckily you were able to cure it with science or whatever.", "Steve almost died from dysentery and gave it to you! Nasty", doctorsfee, "Your bro Steve almost died of Dysentery, you had to pay a doctor mucho dinero to get that fixed, not to mention reupholstering the passenger seat, ugh.");
 
@@ -99,6 +99,11 @@ namespace Oregon_Trip
 
             Event TvDistraction = new Event();
             int[] T;
+            bool isPlaying = true;
+            while (isPlaying) {
+                Console.WriteLine("Welcome to the game Oregon Trip!");
+                Console.WriteLine("Are you ready to play?");
+            }
         }
     }
     class Event
@@ -131,8 +136,4 @@ namespace Oregon_Trip
             this.has_choices = has_choices;
         }
     }
-<<<<<<< HEAD
 }
-=======
-
->>>>>>> origin/master
