@@ -1,4 +1,8 @@
 ﻿using System;
+
+
+
+
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +14,19 @@ namespace Oregon_Trip
     {
         static void Main(string[] args)
         {
-            
+            Event StoryTime = new Event();
+            int[] StoryTimeReq = new int[6] { 0, 0, 0, 0, 0, 4 };
+            int[] StoryTimeChange = new int[6] { 0, 0, 0, 0, 0, -1 };
+            StoryTime.set_shit("The car has been quiet for some time now, and everyone seems a bit bored. To help liven things up you tell an embarrassing story from your past. It brings the conversation back to life and every is a little happier.", "The car has been quiet for some time now, and everyone seems a bit bored. To help liven things up you tell an embarrassing story from your past. No one seems to like it or even react at all. Now there's an awkward silence filling the car.", "", "", StoryTimeReq, StoryTimeChange, false);
+
+            Event TvDistraction = new Event();
+            int[] T;
+
+
+
+
+
+
         }
     }
     class Event
