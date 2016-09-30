@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace Oregon_Trip
 {
-    class Program
+    class Program2
     {
-        static void Main(string[] args)
+        static void NotMain(string[] args)
         {
             Event StoryTime = new Event();
             int[] StoryTimeReq = new int[6] { 0, 0, 4, 0, 0, 0 };
@@ -47,7 +47,7 @@ namespace Oregon_Trip
 
         }
     }
-    class Event
+    class OldEvent
     {
         string start_str; //started event, passed requirements
         string missed_str; //insufficient stats
