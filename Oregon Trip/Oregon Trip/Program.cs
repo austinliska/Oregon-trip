@@ -17,7 +17,7 @@ namespace Oregon_Trip
         {
             int[] leprechaunarray = new int[6] { 0, 0, 0, 0, 4, 0 };
             int[] leprechaunstatchange = new int[6] { 0, 0, 0, 0, 0, 1 };
-            Class1 Leprechaun = new Event();
+            Event Leprechaun = new Event();
             Leprechaun.set_shit(leprechaunarray, leprechaunstatchange,"OMFG! You just noticed a leprechaun on the dashboard rocking out to “We Built This On Rock and Roll” you were quick enough to catch it and it gave you a lucky coin as a reward!", "You get the feeling you just missed out on something big, but whatevs, crank the tunes!");
 
             int[] rideinstylearray = new int[6] { 0, 0, 4, 0, 0, 5 };
@@ -33,8 +33,9 @@ namespace Oregon_Trip
             int[] dysenteryarray = new int[6] { 0, 4, 0, 0, 2, 0 };
             int[] dysenterystatchange = new int[6] { 0, -1, -1, -1, 0, 0 };
             int[] none = new int[6] { 0, 0, 0, 0, 0, 0 };
+            int[] doctorsfee = new int[6] {-2000,0,0,0,0,0}; 
             Event Dysentery = new Event();
-            Dysentery.set_shit(dysenteryarray, none, "Your bro Steve got a case of Dysentery from some gas station sushi, luckily you were able to cure it with science or whatever.", "Steve almost died from dysentery and gave it to you! Nasty", "", "");
+            Dysentery.set_shit(dysenteryarray, dysenterystatchange, "Your bro Steve got a case of Dysentery from some gas station sushi, luckily you were able to cure it with science or whatever.", "Steve almost died from dysentery and gave it to you! Nasty", doctorsfee, "Your bro Steve almost died of Dysentery, you had to pay a doctor mucho dinero to get that fixed, not to mention reupholstering the passenger seat, ugh.");
 
             int[] mirrorarray = new int[6] { 0, 3, 0, 0, 0, 0 };
             int[] mirrorstatchange = new int[6] { 0, 0, 0, 0, 0, -1 };
@@ -129,12 +130,5 @@ namespace Oregon_Trip
             this.stat_change = stat_change;
             this.has_choices = has_choices;
         }
-       
-        }
     }
-
-    
-
-
-
 }
