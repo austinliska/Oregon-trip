@@ -14,11 +14,7 @@ namespace Oregon_Trip
     {
         static void NotMain(string[] args)
         {
-            Event TvDistraction = new Event();
-            int[] TvDistractionReq = new int[6] {0,0,0,0,3,0};
-            int[] TVDistractionChange = new int[6] {0,0,0,0,0,1};
-            TvDistraction.set_shit("While mindlessly staring at the highway your eyes catch an animated show playing in the minivan parallel to your car. As you start to focus more on the show than your driving a car quickly merges lanes and pumps their brakes.Luckily your ninja - like reflexes kick in and you manage not to crash.", "While mindlessly staring at the highway your eyes catch an animated show playing in the minivan parallel to your car. As you start to focus more on the show than your driving a car quickly merges lanes and pumps their brakes. You’re senses have been dulled by the drive too much for you to notice. As you slam into the car’s bumper, the semi behind you crushes your car like a toy. ", "", "", TvDistractionReq, TVDistractionChange, false);
-
+            
             Event FightInBackseat = new Event();
             int[] FightInBackseatReq1 = new int[6] { 0, 3, 3, 0, 0, 0 };
             int[] FightInBackseatReq2 = new int[6] { 0, 0, 3, 0, 0, 0 };
