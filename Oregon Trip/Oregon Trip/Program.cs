@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Oregon_Trip
+namespace ConsoleApplication1
 {
     class Program
     {
