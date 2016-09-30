@@ -8,10 +8,28 @@ namespace Oregon_Trip
 {
     class Driver1
     {
-        public Driver1(int[] stat_reqs = new int[6], int[] state_changes = new int[6])
+        public Driver(Event theEvent)
+        /*
+        Function requires an int array of all stat requirements, an int array of the positive and negative changes to all stats
+        Optional - the amount of money to start
+        */
         {
-
+            Console.WriteLine("The text of the adventure, would you like to begin? (Y/N): ");
+            string pq = Console.ReadLine().ToString().Trim().ToLower();
+            if (pq == "y")
+            {
+                //user said yes
+            }
+            else if (pq == "n")
+            {
+                //user said no
+            }
+            else
+            {
+                //invalid input
+            }
         }
+
     }
     class NewEvent
     {
