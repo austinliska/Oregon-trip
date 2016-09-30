@@ -133,8 +133,3 @@ namespace Oregon_Trip
         }
     }
 
-    
-
-
-
-}
