@@ -10,8 +10,7 @@ namespace Oregon_Trip
     {
         static void Main(string[] args)
         {
-            Event Mexican_Standoff = new Event();
-            Mexican_Standoff.set_shit("fd","fd",[0, 0, 0, 3, 0, 0],
+            
         }
     }
     class Event
@@ -35,13 +34,20 @@ namespace Oregon_Trip
 
         public void set_shit(string start_str, string missed_str, string fail_str, string end_str, int[] stat_req, int[] stat_change, bool has_choices = false)
         {
-            start_str = this.start_str;
-            missed_str = this.missed_str;
-            fail_str = this.fail_str;
-            end_str = this.end_str;
-            stat_req = this.stat_req;
-            stat_change = this.stat_change;
-            has_choices = this.has_choices;
+            this.start_str = start_str;
+            this.missed_str = missed_str;
+            this.fail_str = fail_str;
+            this.end_str = end_str;
+            this.stat_req = stat_req;
+            this.stat_change = stat_change;
+            this.has_choices = has_choices;
+        }
+        public void get_shit(string request)
+        {
+            if (request == start_str)
+            {
+
+            }
         }
     }
 
