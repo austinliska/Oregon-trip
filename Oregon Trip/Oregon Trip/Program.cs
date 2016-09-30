@@ -116,7 +116,7 @@ namespace Oregon_Trip
             int[] TvDistractionReq = new int[6] { 0, 0, 0, 0, 3, 0 };
             int[] TVDistractionChange = new int[6] { 0, 0, 0, 0, 0, 1 };
             Event TvDistraction = new Event();
-            TvDistraction.set(TvDistractionReq,TVDistractionChange, "String = “While mindlessly staring at the highway your eyes catch an animated show playing in the minivan parallel to your car. As you start to focus more on the show than your driving a car quickly merges lanes and pumps their brakes. Luckily your ninja-like reflexes kick in and you manage not to crash.", "While mindlessly staring at the highway your eyes catch an animated show playing in the minivan parallel to your car. As you start to focus more on the show than your driving a car quickly merges lanes and pumps their brakes.You’re senses have been dulled by the drive too much for you to notice.As you slam into the car’s bumper, the semi behind you crushes your car like a toy.")
+            TvDistraction.set(TvDistractionReq, TVDistractionChange, "String = “While mindlessly staring at the highway your eyes catch an animated show playing in the minivan parallel to your car. As you start to focus more on the show than your driving a car quickly merges lanes and pumps their brakes. Luckily your ninja-like reflexes kick in and you manage not to crash.", "While mindlessly staring at the highway your eyes catch an animated show playing in the minivan parallel to your car. As you start to focus more on the show than your driving a car quickly merges lanes and pumps their brakes.You’re senses have been dulled by the drive too much for you to notice.As you slam into the car’s bumper, the semi behind you crushes your car like a toy.");
 
 
             int[] FightInBackseatReq1 = new int[6] { 0, 3, 3, 0, 0, 0 };
@@ -131,7 +131,19 @@ namespace Oregon_Trip
             int[] FlatTireReq2 = new int[6] { 300, 0, 0, 0, 0, 0 };
             int[] FlatTireChange1 = new int[6] { 0, 0, 0, 0, 0, 0 };
             int[] FlatTireChange2 = new int[6] { -300, 0, 0, 0, 0, 0 };
+            Event FlatTire = new Event();
+            FlatTire.set(FlatTireReq1, FlatTireChange1, "You’re cruising down the highway when suddenly you hear a loud POP! Good thing you both have a spare and know how to put it on. This is only a minor hiccup in your road trip as you continue on in a few minutes.", "You’re cruising down the highway when suddenly you hear a loud POP! Too bad you didn’t remember to pack a spare and you’re too poor to afford a new one. Looks like this is the end of the road.", FlatTireReq2, FlatTireChange2, "You’re cruising down the highway when suddenly you hear a loud POP! Too bad you didn’t remember to pack a spare. You have to hire a guy to come out and put a new tire on, hope you didn’t want that $300.");
 
+            int[] BlackHoleReq1 = new int[6] { 0, 0, 0, 0, 0, 5 };
+            int[] BlackHoleChange1 = new int[6] { 0, 0, 0, 0, 0, 0 };
+            Event BlackHole = new Event();
+            BlackHole.set(BlackHoleReq1, BlackHoleChange1, "The road in front of you starts to crumble and the sky turns into a dark shade of purple. Suddenly you’re staring into the abyss of a black hole that is lifting your car into it. You drift closer and closer towards the center when suddenly a bright flash of light blinds you. You awake with everyone in your car in the concert parking lot, LET’S PARTYYYY!!", "The road in front of you starts to crumble and the sky turns into a dark shade of purple. Suddenly you’re staring into the abyss of a black hole that is lifting your car into it. You drift closer and closer towards the center when suddenly a bright flash of light blinds you. You wake up back home in your bed, the whole trip was just a dream.");
+
+            int[] MerchantReq1 = new int[6] { 500, 0, 0, 0, 0, 0 };
+            int[] MerchantReq2 = new int[6] { 3500, 0, 0, 0, 0, 0 };
+            int[] MerchantReq3 = new int[6] { 500, 0, 0, 0, 0, 0 };
+            Event Merchant = new Event();
+            Merchant.set(MerchantReq1,null, "You see a merchant selling various wares from a wooden stand on the side of the road. You pull up to see what he’s selling:",)
 
 
 
