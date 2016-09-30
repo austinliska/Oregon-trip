@@ -12,28 +12,40 @@ namespace Oregon_Trip
 {
     class Program
     {
-        //public void set(int[] req1, int[] change1, string success, string fail, int[] req2 = null, int[] change2 = null, string alt1 = null, int[] req3 = null, int[] change3 = null, string alt2 = null)
         static void Main(string[] args)
         {
+<<<<<<< HEAD
             int[] leprechaunarray = new int[6] { 0, 0, 0, 0, 4, 0 };
             int[] leprechaunstatchange = new int[6] { 0, 0, 0, 0, 0, 1 };
             Event Leprechaun = new Event();
+<<<<<<< HEAD
             Leprechaun.set(leprechaunarray, leprechaunstatchange,"OMFG! You just noticed a leprechaun on the dashboard rocking out to “We Built This On Rock and Roll” you were quick enough to catch it and it gave you a lucky coin as a reward!", "You get the feeling you just missed out on something big, but whatevs, crank the tunes!");
+=======
+            Leprechaun.set_shit(leprechaunarray, leprechaunstatchange, "OMFG! You just noticed a leprechaun on the dashboard rocking out to “We Built This On Rock and Roll” you were quick enough to catch it and it gave you a lucky coin as a reward!", "You get the feeling you just missed out on something big, but whatevs, crank the tunes!");
+>>>>>>> origin/master
 
             int[] rideinstylearray = new int[6] { 0, 0, 4, 0, 0, 5 };
             int[] rideinstylestatchange = new int[6] { 0, 0, 0, 0, 0, 0 };
             Event RideInStyle = new Event();
+<<<<<<< HEAD
             RideInStyle.set(rideinstylearray, rideinstylestatchange, "While stopped at a gas station in the middle of nowhere, you notice that the band you were going to see is also stopped there. You approach them letting them know what big fans you guys are of the band. Charmed by your kind words, the band offers to let you ride with them all the way to Oregon! Rock on!", "You sense a disturbance in the force, as though you just missed out on the event of your life.");
+=======
+            RideInStyle.set_shit("While stopped at a gas station in the middle of nowhere, you notice that the band you were going to see is also stopped there. You approach them letting them know what big fans you guys are of the band. Charmed by your kind words, the band offers to let you ride with them all the way to Oregon! Rock on!", "You sense a disturbance in the force, as though you just missed out on the event of your life.", "", "", rideinstylearray, rideinstylestatchange);
+>>>>>>> origin/master
 
             int[] deerarray = new int[6] { 0, 0, 0, 0, 3, 0 };
             int[] deerstatchange = new int[6] { -500, 0, 0, 0, 0, 0 };
             Event Deer = new Event();
+<<<<<<< HEAD
             Deer.set( deerarray, none, "A deer just sauntered into the road, but you were quick enough to avoid it. Keep on truckin’", "You just hit a deer, and with no money to fix the car, it looks like you're hitchhiking back.", deerstatchange, "You hit a deer! It was an accident, but you still feel bad. Not to mention the cost this is going to be for repairs.");
+=======
+            Deer.set_shit(deerarray, none, "A deer just sauntered into the road, but you were quick enough to avoid it. Keep on truckin’", "You just hit a deer, and with no money to fix the car, it looks like you're hitchhiking back.", deerstatchange, "You hit a deer! It was an accident, but you still feel bad. Not to mention the cost this is going to be for repairs.");
+>>>>>>> origin/master
 
             int[] dysenteryarray = new int[6] { 0, 4, 0, 0, 2, 0 };
             int[] dysenterystatchange = new int[6] { 0, -1, -1, -1, 0, 0 };
             int[] none = new int[6] { 0, 0, 0, 0, 0, 0 };
-            int[] doctorsfee = new int[6] {-2000,0,0,0,0,0}; 
+            int[] doctorsfee = new int[6] { -2000, 0, 0, 0, 0, 0 };
             Event Dysentery = new Event();
             Dysentery.set(dysenteryarray, dysenterystatchange, "Your bro Steve got a case of Dysentery from some gas station sushi, luckily you were able to cure it with science or whatever.", "Steve almost died from dysentery and gave it to you! Nasty", doctorsfee, "Your bro Steve almost died of Dysentery, you had to pay a doctor mucho dinero to get that fixed, not to mention reupholstering the passenger seat, ugh.");
 
@@ -94,15 +106,33 @@ namespace Oregon_Trip
             int[] gasarray = new int[6] { 0, 0, 0, 0, 4, 0 };
             int[] gasstatchange = new int[6] { -200, 0, 0, 0, 0, 0 };
             Event Gas = new Event();
+<<<<<<< HEAD
             Gas.set("You have run out of gas, luckily your knowledge of science or whatever allows you to hastily create some fuel using fast food bags, a megaphone, and a full tank of gas you found on the side of the road.", "You have run out of gas on the side of the road, and have to wait an hour in the hot sun for roadside assistance to show up. They really marked up the price for Aloe.", "", "", gasarray, gasstatchange);
 
             Event StoryTime = new Event();
             int[] StoryTimeReq = new int[6] { 0, 0, 0, 0, 0, 4 };
             int[] StoryTimeChange = new int[6] { 0, 0, 0, 0, 0, -1 };
             StoryTime.set("The car has been quiet for some time now, and everyone seems a bit bored. To help liven things up you tell an embarrassing story from your past. It brings the conversation back to life and every is a little happier.", "The car has been quiet for some time now, and everyone seems a bit bored. To help liven things up you tell an embarrassing story from your past. No one seems to like it or even react at all. Now there's an awkward silence filling the car.", "", "", StoryTimeReq, StoryTimeChange, false);
+=======
+            Gas.set_shit("You have run out of gas, luckily your knowledge of science or whatever allows you to hastily create some fuel using fast food bags, a megaphone, and a full tank of gas you found on the side of the road.", "You have run out of gas on the side of the road, and have to wait an hour in the hot sun for roadside assistance to show up. They really marked up the price for Aloe.", "", "", gasarray, gasstatchange);
+            //=======//
+            int[] deadreq1 = new int[6] { 0, 0, 0, 0, 4, 0 };
+            int[] deadreq2 = new int[6] { 0, 0, 0, 0, 0, 4 };
+            int[] deadchange2 = new int[6] { 2500, 0, 0, 0, 0, 0 };
+            Event Deaddrop = new Event();
+            Deaddrop.set(deadreq1, null, "You needed to pull over and take a leak on the side of the road. While making shapes in the ground with wizz, your stream trickled over a black suitcase. Upon opening the case you find out it’s a dead drop filled with cash. Take the money?", "You needed to pull over and take a leak on the side of the road. You make shapes in the ground with your pee before getting back in the car. That sure was fun.", deadreq2, deadchange2, "You take the money from the suitcase and drive off without even batting an eye.",req3, change3, "You go to grab the money when suddenly a black SUV pulls up beside your car. Two men with guns step out and shoot you on the spot. Good try kid.");
 
-            Event TvDistraction = new Event();
-            int[] T;
+
+
+
+
+
+
+>>>>>>> origin/master
+
+
+
+>>>>>>> origin/master
         }
     }
     class Event
@@ -124,15 +154,18 @@ namespace Oregon_Trip
         int[] stat_change = new int[6];
         bool has_choices;
 
-        public void set_shit(string start_str, string missed_str, string fail_str, string end_str, int[] stat_req, int[] stat_change, bool has_choices = false)
+        public void set(int[] req1, int[] change1, string success, string fail, int[] req2 = null, int[] change2 = null, string alt1 = null, int[] req3 = null, int[] change3 = null, string alt2 = null)
         {
-            this.start_str = start_str;
-            this.missed_str = missed_str;
-            this.fail_str = fail_str;
-            this.end_str = end_str;
-            this.stat_req = stat_req;
-            this.stat_change = stat_change;
-            this.has_choices = has_choices;
+            this.req1 = req1;
+            this.change1 = change1;
+            this.success = success;
+            this.fail = fail;
+            this.req2 = req2;
+            this.change2 = change2;
+            this.alt1 = alt1;
+            this.req3 = req3;
+            this.change3 = change3;
+            this.alt2 = alt2;
         }
     }
 }
