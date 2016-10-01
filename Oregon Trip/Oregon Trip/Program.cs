@@ -98,7 +98,6 @@ namespace Oregon_Trip
             Gas.set(gasarray, none, "You have run out of gas, luckily your knowledge of science or whatever allows you to hastily create some fuel using fast food bags, a megaphone, and a full tank of gas you found on the side of the road.", "You have run out of gas on the side of the road, and have to wait an hour in the hot sun for roadside assistance to show up. Unfortunately, you succumb to heatstroke before they arrive.", gasfee, gasstatchange, "You have run out of gas on the side of the road, and have to wait an hour in the hot sun for roadside assistance to show up. They really marked up the price for Aloe.");
 
            
-            Gas.set_shit("You have run out of gas, luckily your knowledge of science or whatever allows you to hastily create some fuel using fast food bags, a megaphone, and a full tank of gas you found on the side of the road.", "You have run out of gas on the side of the road, and have to wait an hour in the hot sun for roadside assistance to show up. They really marked up the price for Aloe.", "", "", gasarray, gasstatchange);
             //=======//
 
             int[] deadreq1 = new int[6] { 0, 0, 0, 0, 4, 0 };
@@ -131,15 +130,6 @@ namespace Oregon_Trip
             int[] FlatTireReq2 = new int[6] { 300, 0, 0, 0, 0, 0 };
             int[] FlatTireChange1 = new int[6] { 0, 0, 0, 0, 0, 0 };
             int[] FlatTireChange2 = new int[6] { -300, 0, 0, 0, 0, 0 };
-
-
-
-
->>>>>>> origin/master
-
-
-
->>>>>>> origin/master
         }
     }
     class Event
