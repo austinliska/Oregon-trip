@@ -131,6 +131,8 @@ namespace Oregon_Trip
             int[] FlatTireReq2 = new int[6] { 300, 0, 0, 0, 0, 0 };
             int[] FlatTireChange1 = new int[6] { 0, 0, 0, 0, 0, 0 };
             int[] FlatTireChange2 = new int[6] { -300, 0, 0, 0, 0, 0 };
+            Event FlatTire = new Event();
+            FlatTire.set(FlatTireReq1, FlatTireChange1, "You’re cruising down the highway when suddenly you hear a loud POP! Good thing you both have a spare and know how to put it on. This is only a minor hiccup in your road trip as you continue on in a few minutes.", "You’re cruising down the highway when suddenly you hear a loud POP! Too bad you didn’t remember to pack a spare and you’re too poor to afford a new one. Looks like this is the end of the road.", FlatTireReq2, FlatTireChange2, "You’re cruising down the highway when suddenly you hear a loud POP! Too bad you didn’t remember to pack a spare. You have to hire a guy to come out and put a new tire on, hope you didn’t want that $300.");
 
 
             int[] MerchantReq1 = new int[6] { 500, 0, 0, 0, 0, 0 };
