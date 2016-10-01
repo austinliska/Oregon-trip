@@ -159,6 +159,8 @@ namespace Oregon_Trip
             Event ArmWrestle = new Event();
             ArmWrestle.set(ArmWrestleReq1, ArmWrestleChange1, "The guy riding shotgun notices how well you can drive one handed, so he decided you should arm wrestle him to prove yourself. Who knows why you agreed or what your trying to prove, but you put one hand on the wheel and the other in his hand. Within seconds you won giving you a huge confidence boost.", "The guy riding shotgun notices how well you can drive one handed, so he decided you should arm wrestle him to prove yourself. Who knows why you agreed or what your trying to prove, but you put one hand on the wheel and the other in his hand. Within seconds you lost giving you a huge confidence loss.", ArmWrestleReq2, null, "The guy riding shotgun notices how well you can drive one handed, so he decided you should arm wrestle him to prove yourself. You use your cunningness to sway the car’s attention avoiding the wrestle all together.", null, ArmWrestleChange3);
 
+            Event[] RangeOfEvents = new Event[30] { Leprechaun, RideInStyle, Deer, Dysentery, Mirror, MexicanStandoff, Badger, Hillfolk, Carsick, Ghost, 
+                Pullover, Sports, Bird, Alien, Gas, Deaddrop, StoryTime, TvDistraction, FightInBackseat, Merchant, BurningTemple, Diabetes, ArmWrestle,FlatTire };
         }
     }
     class Event
