@@ -18,7 +18,7 @@ namespace Oregon_Trip
             int[] leprechaunarray = new int[6] { 0, 0, 0, 0, 4, 0 };
             int[] leprechaunstatchange = new int[6] { 0, 0, 0, 0, 0, 1 };
             Event Leprechaun = new Event();
-            Leprechaun.set(leprechaunarray, leprechaunstatchange,"OMFG! You just noticed a leprechaun on the dashboard rocking out to “We Built This On Rock and Roll” you were quick enough to catch it and it gave you a lucky coin as a reward!", "You get the feeling you just missed out on something big, but whatevs, crank the tunes!");
+            Leprechaun.set(leprechaunarray, leprechaunstatchange, "OMFG! You just noticed a leprechaun on the dashboard rocking out to “We Built This On Rock and Roll” you were quick enough to catch it and it gave you a lucky coin as a reward!", "You get the feeling you just missed out on something big, but whatevs, crank the tunes!");
 
             int[] rideinstylearray = new int[6] { 0, 0, 4, 0, 0, 5 };
             int[] rideinstylestatchange = new int[6] { 0, 0, 0, 0, 0, 0 };
@@ -29,11 +29,11 @@ namespace Oregon_Trip
             int[] hasdeerfee = new int[6] { 500, 0, 0, 0, 0, 0 };
             int[] deerstatchange = new int[6] { -500, 0, 0, 0, 0, 0 };
             Event Deer = new Event();
-            Deer.set( deerarray, none, "A deer just sauntered into the road, but you were quick enough to avoid it. Keep on truckin’", "You just hit a deer, and with no money to fix the car, it looks like you're hitchhiking back.", hasdeerfee, deerstatchange, "You hit a deer! It was an accident, but you still feel bad. Not to mention the cost this is going to be for repairs.");
+            Deer.set(deerarray, none, "A deer just sauntered into the road, but you were quick enough to avoid it. Keep on truckin’", "You just hit a deer, and with no money to fix the car, it looks like you're hitchhiking back.", hasdeerfee, deerstatchange, "You hit a deer! It was an accident, but you still feel bad. Not to mention the cost this is going to be for repairs.");
 
             int[] dysenteryarray = new int[6] { 0, 4, 0, 0, 2, 0 };
             int[] dysenterystatchange = new int[6] { 0, -1, -1, -1, 0, 0 };
-            int[] hasfee = new int[6] {2000,0,0,0,0,0}; 
+            int[] hasfee = new int[6] { 2000, 0, 0, 0, 0, 0 };
             int[] doctorsfee = new int[6] { -2000, 0, 0, 0, 0, 0 };
             Event Dysentery = new Event();
             Dysentery.set(dysenteryarray, dysenterystatchange, "Your bro Steve got a case of Dysentery from some gas station sushi, luckily you were able to cure it with science or whatever.", "Steve almost died from dysentery and gave it to you! Nasty", hasfee, doctorsfee, "Your bro Steve almost died of Dysentery, you had to pay a doctor mucho dinero to get that fixed, not to mention reupholstering the passenger seat, ugh.");
@@ -98,25 +98,25 @@ namespace Oregon_Trip
             Gas.set(gasarray, none, "You have run out of gas, luckily your knowledge of science or whatever allows you to hastily create some fuel using fast food bags, a megaphone, and a full tank of gas you found on the side of the road.", "You have run out of gas on the side of the road, and have to wait an hour in the hot sun for roadside assistance to show up. Unfortunately, you succumb to heatstroke before they arrive.", gasfee, gasstatchange, "You have run out of gas on the side of the road, and have to wait an hour in the hot sun for roadside assistance to show up. They really marked up the price for Aloe.");
 
            
-            Gas.set_shit("You have run out of gas, luckily your knowledge of science or whatever allows you to hastily create some fuel using fast food bags, a megaphone, and a full tank of gas you found on the side of the road.", "You have run out of gas on the side of the road, and have to wait an hour in the hot sun for roadside assistance to show up. They really marked up the price for Aloe.", "", "", gasarray, gasstatchange);
+            // Gas.set_shit("You have run out of gas, luckily your knowledge of science or whatever allows you to hastily create some fuel using fast food bags, a megaphone, and a full tank of gas you found on the side of the road.", "You have run out of gas on the side of the road, and have to wait an hour in the hot sun for roadside assistance to show up. They really marked up the price for Aloe.", "", "", gasarray, gasstatchange);
             //=======//
 
             int[] deadreq1 = new int[6] { 0, 0, 0, 0, 4, 0 };
             int[] deadreq2 = new int[6] { 0, 0, 0, 0, 0, 4 };
             int[] deadchange2 = new int[6] { 2500, 0, 0, 0, 0, 0 };
             Event Deaddrop = new Event();
-            Deaddrop.set(deadreq1, null, "You needed to pull over and take a leak on the side of the road. While making shapes in the ground with wizz, your stream trickled over a black suitcase. Upon opening the case you find out it’s a dead drop filled with cash. Take the money?", "You needed to pull over and take a leak on the side of the road. You make shapes in the ground with your pee before getting back in the car. That sure was fun.", deadreq2, deadchange2, "You take the money from the suitcase and drive off without even batting an eye.",req3, change3, "You go to grab the money when suddenly a black SUV pulls up beside your car. Two men with guns step out and shoot you on the spot. Good try kid.");
+            Deaddrop.set(deadreq1, null, "You needed to pull over and take a leak on the side of the road. While making shapes in the ground with wizz, your stream trickled over a black suitcase. Upon opening the case you find out it’s a dead drop filled with cash. Take the money?", "You needed to pull over and take a leak on the side of the road. You make shapes in the ground with your pee before getting back in the car. That sure was fun.", deadreq2, deadchange2, "You take the money from the suitcase and drive off without even batting an eye.", null, null, "You go to grab the money when suddenly a black SUV pulls up beside your car. Two men with guns step out and shoot you on the spot. Good try kid.");
 
             int[] storyreq1 = new int[6] { 0, 0, 4, 0, 0, 0 };
             int[] storychange1 = new int[6] { 0, 0, 1, 0, 0, 0 };
             int[] storychange2 = new int[6] { 0, 0, -1, 0, 0, 0 };
             Event StoryTime = new Event();
-            StoryTime.set(storyreq1, storychange1, "The car has been quiet for some time now, and everyone seems a bit bored. To help liven things up you tell an embarrassing story from your past. It brings the conversation back to life and every is a little happier.", "The car has been quiet for some time now, and everyone seems a bit bored. To help liven things up you tell an embarrassing story from your past. No one seems to like it or even react at all. Now there's an awkward silence filling the car.", req2, storychange2);
+            StoryTime.set(storyreq1, storychange1, "The car has been quiet for some time now, and everyone seems a bit bored. To help liven things up you tell an embarrassing story from your past. It brings the conversation back to life and every is a little happier.", "The car has been quiet for some time now, and everyone seems a bit bored. To help liven things up you tell an embarrassing story from your past. No one seems to like it or even react at all. Now there's an awkward silence filling the car.", null, storychange2);
 
             int[] TvDistractionReq = new int[6] { 0, 0, 0, 0, 3, 0 };
             int[] TVDistractionChange = new int[6] { 0, 0, 0, 0, 0, 1 };
             Event TvDistraction = new Event();
-            TvDistraction.set(TvDistractionReq, TVDistractionChange, "String = “While mindlessly staring at the highway your eyes catch an animated show playing in the minivan parallel to your car. As you start to focus more on the show than your driving a car quickly merges lanes and pumps their brakes. Luckily your ninja-like reflexes kick in and you manage not to crash.", "While mindlessly staring at the highway your eyes catch an animated show playing in the minivan parallel to your car. As you start to focus more on the show than your driving a car quickly merges lanes and pumps their brakes.You’re senses have been dulled by the drive too much for you to notice.As you slam into the car’s bumper, the semi behind you crushes your car like a toy.");
+            TvDistraction.set(TvDistractionReq, TVDistractionChange, "String = “While mindlessly staring at the highway your eyes catch an animated show playing in the minivan parallel to your car. As you start to focus more on the show than your driving a car quickly merges lanes and pumps their brakes. Luckily your ninja-like reflexes kick in and you manage not to crash.", "While mindlessly staring at the highway your eyes catch an animated show playing in the minivan parallel to your car. As you start to focus more on the show than your driving a car quickly merges lanes and pumps their brakes.You’re senses have been dulled by the drive too much for you to notice. As you slam into the car’s bumper, the semi behind you crushes your car like a toy.");
 
 
             int[] FightInBackseatReq1 = new int[6] { 0, 3, 3, 0, 0, 0 };
@@ -125,38 +125,47 @@ namespace Oregon_Trip
             int[] FightInBackseatChange2 = new int[6] { -100, 0, 0, 0, 0, 0 };
             int[] FightInBackseatChnge3 = new int[6] { 0, 0, 0, -1, 0, 0 };
             Event FightInBackseat = new Event();
-            FightInBackseat.set(FightInBackseatReq1, FightInBackseatChange1, "You hear two people bickering behind you and it’s starting to get heated. Good thing you read all those books for this exact situation. Within seconds you manage to calm everyone down. Way to go champ!", "You hear two people bickering behind you and it’s starting to get heated.You don’t really know how to fix it, so you negotiate to pay them fifty dollars each if it will solve this whole situation.", FightInBackseatReq2, FightInBackseatChange2, "You hear two people bickering behind you and it’s starting to get heated. You don’t really know how to fix it, so you end up getting elbowed in the back of the head.", req3, FightInBackseatChnge3);
+            FightInBackseat.set(FightInBackseatReq1, FightInBackseatChange1, "You hear two people bickering behind you and it’s starting to get heated. Good thing you read all those books for this exact situation. Within seconds you manage to calm everyone down. Way to go champ!", "You hear two people bickering behind you and it’s starting to get heated.You don’t really know how to fix it, so you negotiate to pay them fifty dollars each if it will solve this whole situation.", FightInBackseatReq2, FightInBackseatChange2, "You hear two people bickering behind you and it’s starting to get heated. You don’t really know how to fix it, so you end up getting elbowed in the back of the head.", null, FightInBackseatChnge3);
 
             int[] FlatTireReq1 = new int[6] { 0, 3, 0, 0, 0, 0 };
             int[] FlatTireReq2 = new int[6] { 300, 0, 0, 0, 0, 0 };
             int[] FlatTireChange1 = new int[6] { 0, 0, 0, 0, 0, 0 };
             int[] FlatTireChange2 = new int[6] { -300, 0, 0, 0, 0, 0 };
-            Event FlatTire = new Event();
-            FlatTire.set(FlatTireReq1, FlatTireChange1, "You’re cruising down the highway when suddenly you hear a loud POP! Good thing you both have a spare and know how to put it on. This is only a minor hiccup in your road trip as you continue on in a few minutes.", "You’re cruising down the highway when suddenly you hear a loud POP! Too bad you didn’t remember to pack a spare and you’re too poor to afford a new one. Looks like this is the end of the road.", FlatTireReq2, FlatTireChange2, "You’re cruising down the highway when suddenly you hear a loud POP! Too bad you didn’t remember to pack a spare. You have to hire a guy to come out and put a new tire on, hope you didn’t want that $300.");
-
-            int[] BlackHoleReq1 = new int[6] { 0, 0, 0, 0, 0, 5 };
-            int[] BlackHoleChange1 = new int[6] { 0, 0, 0, 0, 0, 0 };
-            Event BlackHole = new Event();
-            BlackHole.set(BlackHoleReq1, BlackHoleChange1, "The road in front of you starts to crumble and the sky turns into a dark shade of purple. Suddenly you’re staring into the abyss of a black hole that is lifting your car into it. You drift closer and closer towards the center when suddenly a bright flash of light blinds you. You awake with everyone in your car in the concert parking lot, LET’S PARTYYYY!!", "The road in front of you starts to crumble and the sky turns into a dark shade of purple. Suddenly you’re staring into the abyss of a black hole that is lifting your car into it. You drift closer and closer towards the center when suddenly a bright flash of light blinds you. You wake up back home in your bed, the whole trip was just a dream.");
-
-            
 
 
+            int[] MerchantReq1 = new int[6] { 500, 0, 0, 0, 0, 0 };
+            int[] MerchantReq2 = new int[6] { 3500, 0, 0, 0, 0, 0 };
+            int[] MerchantReq3 = new int[6] { 500, 0, 0, 0, 0, 0 };
+            Event Merchant = new Event();
+            Merchant.set(MerchantReq1, null, "You see a merchant selling various wares from a wooden stand on the side of the road. You pull up to see what he’s selling:", "You see a merchant selling various wares from a wooden stand on the side of the road. You slow down your car as you by to look at what he has. While you try to get a peak you see someone with what looks to be a teleporter disappear in front of your eyes. “Odd” you think to yourself as you continue driving.",MerchantReq2,null, "You instantly teleport to the concert, Kickass man. Now go have fun.",MerchantReq3,null, "The shop owner hands you a bag of bones with instructions on how to open a portal.After reciting the chant perfectly a tear in the fabric of space opens for you and your friends.On the other side you can see the concert hall.Everyone grabs hands and jumps in together while playing classic 80’s tunes. Now go enjoy your concert you crazy kids.");
 
->>>>>>> origin/master
+            int[] BurningTempleReq1 = new int[6] {0,3,0,0,0,0};
+            int[] BurningTempleChange1 = new int[6] {0,1,0,0,1,0};
+            int[] BurningTempleChange2 = new int[6] { 0, 0, 0, -1, 0, 0 };
+            Event BurningTemple = new Event();
+            BurningTemple.set(BurningTempleReq1, BurningTempleChange1, "While you pass through Utah you see a burning temple on the side of the road. You and your friends pile out of the car to get a good assessment of the situation, But just as you start to look for a water source the temple fades away in thin air. A man in a wizard hat is left standing where the burning building had been. He approaches you and slaps his palms against your temples. You let out a horrific cry of pain as you feel your brain beginning to grow.", "While you pass through Utah you see a burning temple on the side of the road. You and your friends pile out of the car to get a good assessment of the situation, But just as you start to look for a water source the temple fades away in thin air. A man in a wizard hat is left standing where the burning building had been. He approaches you and slaps his palms against your temples. You let out a horrific cry of pain and drop to your knees. The man is taken aback for a second before regaining his posture. He exclaims that he just didn’t know… whatever that means. Then he disappears just like the temple. Leaving you with more questions then answers, you have no choice but to load back in the car and carry on with your new killer migraine.", null, BurningTempleChange2);
 
+            int[] DiabetesReq1 = new int[6] { 0, 0, 0, 0, 0, 3 };
+            int[] Diabeteschange1 = new int[6] { 0, 0, 0, 0, 0, 1 };
+            Event Diabetes = new Event();
+            Diabetes.set(DiabetesReq1, Diabeteschange1, "You stocked up on sweets before the trip to snack on. When the backseat asks you to pass the candy you notice that you’ve already ate it all! You’re disgusting.", "You stocked up on sweets before the trip to snack on. When the backseat asks you to pass back the candy you notice that you ate it all. Suddenly you left arm goes cold and your left eye starts to sag. YOU’RE HAVING A STROKE!! Without proper motor functions you wreck the car, thanks fatty.");
 
+            int[] ArmWrestleReq1 = new int[6] { 0, 0, 0, 4, 0, 0 };
+            int[] ArmWrestleChange1 = new int[6] { 0, 0, 0, 0, 0, 1 };
+            int[] ArmWrestleReq2 = new int[6] { 0, 0, 0, 0, 0, 4 };
+            int[] ArmWrestleChange3 = new int[6] { 0, 0, 0, 0, 0, -1 };
+            Event ArmWrestle = new Event();
+            ArmWrestle.set(ArmWrestleReq1, ArmWrestleChange1, "The guy riding shotgun notices how well you can drive one handed, so he decided you should arm wrestle him to prove yourself. Who knows why you agreed or what your trying to prove, but you put one hand on the wheel and the other in his hand. Within seconds you won giving you a huge confidence boost.", "The guy riding shotgun notices how well you can drive one handed, so he decided you should arm wrestle him to prove yourself. Who knows why you agreed or what your trying to prove, but you put one hand on the wheel and the other in his hand. Within seconds you lost giving you a huge confidence loss.", ArmWrestleReq2, null, "The guy riding shotgun notices how well you can drive one handed, so he decided you should arm wrestle him to prove yourself. You use your cunningness to sway the car’s attention avoiding the wrestle all together.", null, ArmWrestleChange3);
 
->>>>>>> origin/master
         }
     }
     class Event
     {
-        string success; //started event, passed requirements
-        string fail; //insufficient stats
-        string alt1; //failure by chance, not stats
-        string alt2; //success
-        int[] req1 = new int[6]; /*
+        public string success; //started event, passed requirements
+        public string fail; //insufficient stats
+        public string alt1; //failure by chance, not stats
+        public string alt2; //success
+        public int[] req1 = new int[6]; /*
                         Money 0
                         Intelligence 1
                         Charisma 2
@@ -166,11 +175,11 @@ namespace Oregon_Trip
                         [0,0,0,3,0,0] requires 3 strength, 0 all other stats
                          */
 
-        int[] req2 = new int[6];
-        int[] req3 = new int[6];
-        int[] change1 = new int[6];
-        int[] change2 = new int[6];
-        int[] change3 = new int[6];
+        public int[] req2 = new int[6];
+        public int[] req3 = new int[6];
+        public int[] change1 = new int[6];
+        public int[] change2 = new int[6];
+        public int[] change3 = new int[6];
 
 
 
@@ -188,13 +197,52 @@ namespace Oregon_Trip
             this.change3 = change3;
             this.alt2 = alt2;
         }
-        
-    }
-    public void Merchant(int money)
-    {
-        int money = this.money;
-
-        if money() >= 500
-                
+        public object get_shit(string request)
+        {
+            if (request == "req1")
+            {
+                return req1;
+            }
+            else if (request == "req2")
+            {
+                return req2;
+            }
+            else if (request == "req3")
+            {
+                return req3;
+            }
+            else if (request == "change1")
+            {
+                return change1;
+            }
+            else if (request == "change2")
+            {
+                return change2;
+            }
+            else if (request == "change3")
+            {
+                return change3;
+            }
+            else if (request == "success")
+            {
+                return success;
+            }
+            else if (request == "fail")
+            {
+                return fail;
+            }
+            else if (request == "alt1")
+            {
+                return alt1;
+            }
+            else if (request == "alt2")
+            {
+                return alt2;
+            }
+            else
+            {
+                return "invalid input";
+            }
+        }
     }
 }

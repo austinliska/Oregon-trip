@@ -8,13 +8,57 @@ namespace Oregon_Trip
 {
     class Driver1
     {
-        public void Driver(Event theEvent)
+        public static void Driver(Event theEvent)
         /*
         Function requires an int array of all stat requirements, an int array of the positive and negative changes to all stats
         Optional - the amount of money to start
         */
         {
-            Console.WriteLine("The text of the adventure, would you like to begin? (Y/N): ");
+            int use_path;
+            User only_user = new User();
+            bool can_proceed = true;
+            foreach (int i in theEvent.req1)
+            {
+                if (only_user.get_stats()[i] < theEvent.req1[i])
+                {
+                    can_proceed = false;
+                } else
+                {
+                    use_path = 1;
+                }
+            }
+            if (!can_proceed & theEvent.req2 != null)
+            {
+                foreach (int i in theEvent.req2)
+                {
+                    if (only_user.get_stats()[i] < theEvent.req2[i])
+                    {
+                        can_proceed = false;
+                    }
+                    else
+                    {
+                        use_path = 2;
+                    }
+                }
+            }
+            if (!can_proceed & theEvent.req3 != null)
+            {
+                foreach (int i in theEvent.req3)
+                {
+                    if (only_user.get_stats()[i] < theEvent.req3[i])
+                    {
+                        can_proceed = false;
+                    }
+                    else
+                    {
+                        use_path = 3;
+                    }
+                }
+            }
+            if (!can_proceed)
+            {
+                Console.WriteLine(theEvent.fail);
+            }
             string pq = Console.ReadLine().ToString().Trim().ToLower();
             if (pq == "y")
             {
@@ -68,52 +112,5 @@ class NewEvent
         this.change3 = change3;
         this.alt2 = alt2;
     }
-    public object get_shit(string request)
-    {
-        if (request == "req1")
-        {
-            return req1;
-        }
-        else if (request == "req2")
-        {
-            return req2;
-        }
-        else if (request == "req3")
-        {
-            return req3;
-        }
-        else if (request == "change1")
-        {
-            return change1;
-        }
-        else if (request == "change2")
-        {
-            return change2;
-        }
-        else if (request == "change3")
-        {
-            return change3;
-        }
-        else if (request == "success")
-        {
-            return success;
-        }
-        else if (request == "fail")
-        {
-            return fail;
-        }
-        else if (request == "alt1")
-        {
-            return alt1;
-        }
-        else if (request == "alt2")
-        {
-            return alt2;
-        }
-        else
-        {
-            return "invalid input";
-        }
-    }
-
+    
 }
