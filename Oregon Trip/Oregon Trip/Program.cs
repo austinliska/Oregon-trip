@@ -139,11 +139,7 @@ namespace Oregon_Trip
             Event BlackHole = new Event();
             BlackHole.set(BlackHoleReq1, BlackHoleChange1, "The road in front of you starts to crumble and the sky turns into a dark shade of purple. Suddenly you’re staring into the abyss of a black hole that is lifting your car into it. You drift closer and closer towards the center when suddenly a bright flash of light blinds you. You awake with everyone in your car in the concert parking lot, LET’S PARTYYYY!!", "The road in front of you starts to crumble and the sky turns into a dark shade of purple. Suddenly you’re staring into the abyss of a black hole that is lifting your car into it. You drift closer and closer towards the center when suddenly a bright flash of light blinds you. You wake up back home in your bed, the whole trip was just a dream.");
 
-            int[] MerchantReq1 = new int[6] { 500, 0, 0, 0, 0, 0 };
-            int[] MerchantReq2 = new int[6] { 3500, 0, 0, 0, 0, 0 };
-            int[] MerchantReq3 = new int[6] { 500, 0, 0, 0, 0, 0 };
-            Event Merchant = new Event();
-            Merchant.set(MerchantReq1,null, "You see a merchant selling various wares from a wooden stand on the side of the road. You pull up to see what he’s selling:",)
+            
 
 
 
@@ -192,5 +188,13 @@ namespace Oregon_Trip
             this.change3 = change3;
             this.alt2 = alt2;
         }
+        
+    }
+    public void Merchant(int money)
+    {
+        int money = this.money;
+
+        if money() >= 500
+                
     }
 }
