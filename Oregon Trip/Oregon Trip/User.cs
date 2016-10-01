@@ -8,10 +8,12 @@ public class User
     int Strength;
     int Perception;
     int Luck;
-	public User()
+    int[] stats = new int[6];
+    public User()
 	{
+        
         int num;
-        Console.writeLine("/nSelect your class /n 1. Jock /n 2. Cheerleader /n 3. Nerd /n 4. Metalhead /n 5.Stoner");
+        Console.WriteLine("/nSelect your class /n 1. Jock /n 2. Cheerleader /n 3. Nerd /n 4. Metalhead /n 5.Stoner");
         num = Convert.ToInt32(Console.ReadLine());
         if (num == 1)
         {
@@ -61,5 +63,16 @@ public class User
             Perception = 3;
             Luck = 3;
         }
+        stats[0] = Money;
+        stats[1] = Intelligence;
+        stats[2] = Charisma;
+        stats[3] = Strength;
+        stats[4] = Perception;
+        stats[5] = Luck;
 	}
+    public int[] get_stats()
+    {
+        return stats;
+    }
+
 }
