@@ -12,8 +12,10 @@ namespace Oregon_Trip
 {
     class Program
     {
+
         static void Main(string[] args)
         {
+            
             int[] none = new int[6] { 0, 0, 0, 0, 0, 0 };
             int[] leprechaunarray = new int[6] { 0, 0, 0, 0, 4, 0 };
             int[] leprechaunstatchange = new int[6] { 0, 0, 0, 0, 0, 1 };
@@ -158,9 +160,18 @@ namespace Oregon_Trip
             int[] ArmWrestleChange3 = new int[6] { 0, 0, 0, 0, 0, -1 };
             Event ArmWrestle = new Event();
             ArmWrestle.set(ArmWrestleReq1, ArmWrestleChange1, "The guy riding shotgun notices how well you can drive one handed, so he decided you should arm wrestle him to prove yourself. Who knows why you agreed or what your trying to prove, but you put one hand on the wheel and the other in his hand. Within seconds you won giving you a huge confidence boost.", "The guy riding shotgun notices how well you can drive one handed, so he decided you should arm wrestle him to prove yourself. Who knows why you agreed or what your trying to prove, but you put one hand on the wheel and the other in his hand. Within seconds you lost giving you a huge confidence loss.", ArmWrestleReq2, null, "The guy riding shotgun notices how well you can drive one handed, so he decided you should arm wrestle him to prove yourself. You use your cunningness to sway the car’s attention avoiding the wrestle all together.", null, ArmWrestleChange3);
-
-            Event[] RangeOfEvents = new Event[30] { Leprechaun, RideInStyle, Deer, Dysentery, Mirror, MexicanStandoff, Badger, Hillfolk, Carsick, Ghost, 
+            User only_user = new User();
+            Event[] RangeOfEvents = new Event[] { Leprechaun, RideInStyle, Deer, Dysentery, Mirror, MexicanStandoff, Badger, Hillfolk, Carsick, Ghost, 
                 Pullover, Sports, Bird, Alien, Gas, Deaddrop, StoryTime, TvDistraction, FightInBackseat, Merchant, BurningTemple, Diabetes, ArmWrestle,FlatTire };
+            //int start2 = Random.Next(0, RangeOfEvents.Length);
+            //Console.Write(RangeOfEvents[start2]);
+            bool still_alive = true;
+            while (still_alive)
+            {
+                Random rnd = new Random();
+                Event event_in_use = RangeOfEvents[rnd.Next(0, RangeOfEvents.Length)];
+                Oregon_Trip.Driver1.Driver(event_in_use, only_user);
+            }
         }
     }
     class Event

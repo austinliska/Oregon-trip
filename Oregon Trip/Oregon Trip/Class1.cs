@@ -8,18 +8,18 @@ namespace Oregon_Trip
 {
     class Driver1
     {
-        public static void Driver(Event theEvent)
+        public static void Driver(Event theEvent, User a)
         /*
         Function requires an int array of all stat requirements, an int array of the positive and negative changes to all stats
         Optional - the amount of money to start
         */
         {
-            int use_path;
-            User only_user = new User();
+            int use_path = 0;
+            
             bool can_proceed = true;
             foreach (int i in theEvent.req1)
             {
-                if (only_user.get_stats()[i] < theEvent.req1[i])
+                if (a.get_stats()[i] < theEvent.req1[i])
                 {
                     can_proceed = false;
                 } else
@@ -31,13 +31,14 @@ namespace Oregon_Trip
             {
                 foreach (int i in theEvent.req2)
                 {
-                    if (only_user.get_stats()[i] < theEvent.req2[i])
+                    if (a.get_stats()[i] < theEvent.req2[i])
                     {
                         can_proceed = false;
                     }
                     else
                     {
                         use_path = 2;
+                        can_proceed = true;
                     }
                 }
             }
@@ -45,13 +46,14 @@ namespace Oregon_Trip
             {
                 foreach (int i in theEvent.req3)
                 {
-                    if (only_user.get_stats()[i] < theEvent.req3[i])
+                    if (a.get_stats()[i] < theEvent.req3[i])
                     {
                         can_proceed = false;
                     }
                     else
                     {
                         use_path = 3;
+                        can_proceed = true;
                     }
                 }
             }
@@ -59,6 +61,22 @@ namespace Oregon_Trip
             {
                 Console.WriteLine(theEvent.fail);
             }
+            else if (use_path == 1)
+            {
+                Console.WriteLine(theEvent.success);
+                a.set_stats(theEvent.change1);
+            }
+            else if (use_path == 2)
+            {
+                Console.WriteLine(theEvent.alt1);
+                a.set_stats(theEvent.change2);
+            }
+            else if (use_path == 3)
+            {
+                Console.WriteLine(theEvent.alt2);
+                a.set_stats(theEvent.change3);
+            }
+
             string pq = Console.ReadLine().ToString().Trim().ToLower();
             if (pq == "y")
             {

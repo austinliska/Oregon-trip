@@ -74,5 +74,12 @@ public class User
     {
         return stats;
     }
+    public void set_stats(int[] change)
+    {
+        foreach (int i in change)
+        {
+            stats[i] += change[i];
+        }
+    }
 
 }
