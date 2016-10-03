@@ -25,6 +25,7 @@ namespace Oregon_Trip
             int[] rideinstylearray = new int[6] { 0, 0, 4, 0, 0, 5 };
             int[] rideinstylestatchange = new int[6] { 0, 0, 0, 0, 0, 0 };
             Event RideInStyle = new Event();
+            RideInStyle.end1 = true;
 
             RideInStyle.set(rideinstylearray, rideinstylestatchange, "While stopped at a gas station in the middle of nowhere, you notice that the band you were going to see is also stopped there. You approach them letting them know what big fans you guys are of the band. Charmed by your kind words, the band offers to let you ride with them all the way to Oregon! Rock on!", "You sense a disturbance in the force, as though you just missed out on the event of your life.");
             int[] deerarray = new int[6] { 0, 0, 0, 0, 3, 0 };
@@ -166,12 +167,70 @@ namespace Oregon_Trip
             //int start2 = Random.Next(0, RangeOfEvents.Length);
             //Console.Write(RangeOfEvents[start2]);
             bool still_alive = true;
+            Dysentery.end2 = true;
+            MexicanStandoff.end3 = true;
+            Badger.end2 = true;
+            Hillfolk.end2 = true;
+            Pullover.end2 = true;
+            Bird.end2 = true;
+            Alien.end1 = true;
+            Gas.end2 = true;
+            Deaddrop.end2 = true;
+            TvDistraction.end2 = true;
             while (still_alive)
             {
+                
                 Random rnd = new Random();
+                int result;
+                
                 Event event_in_use = RangeOfEvents[rnd.Next(0, RangeOfEvents.Length)];
-                Oregon_Trip.Driver1.Driver(event_in_use, only_user);
+                result = Oregon_Trip.Driver1.Driver(event_in_use, only_user);
+                if (result == 1)
+                {
+                    if (event_in_use.end1 == true)
+                    {
+                        still_alive = false;
+                    }
+                    try {
+                        only_user.set_stats(event_in_use.change1);
+                    }
+                    catch
+                    {
+                        still_alive = false;
+                    }
+                }
+                if (result == 2)
+                {
+                    if (event_in_use.end2 == true)
+                    {
+                        still_alive = false;
+                    }
+                    try
+                    {
+                        only_user.set_stats(event_in_use.change2);
+                    }
+                    catch
+                    {
+                        still_alive = false;
+                    }
+                }
+                if (result == 3)
+                {
+                    if (event_in_use.end3 == true)
+                    {
+                        still_alive = false;
+                    }
+                    try
+                    {
+                        only_user.set_stats(event_in_use.change3);
+                    }
+                    catch
+                    {
+                        still_alive = false;
+                    }
+                }
             }
+            Console.WriteLine("Game Over!");
         }
     }
     class Event
@@ -180,6 +239,7 @@ namespace Oregon_Trip
         public string fail; //insufficient stats
         public string alt1; //failure by chance, not stats
         public string alt2; //success
+
         public int[] req1 = new int[6]; /*
                         Money 0
                         Intelligence 1
@@ -195,9 +255,9 @@ namespace Oregon_Trip
         public int[] change1 = new int[6];
         public int[] change2 = new int[6];
         public int[] change3 = new int[6];
-
-
-
+        public bool end1 = false;
+        public bool end2 = false;
+        public bool end3 = false;
 
         public void set(int[] req1, int[] change1, string success, string fail, int[] req2 = null, int[] change2 = null, string alt1 = null, int[] req3 = null, int[] change3 = null, string alt2 = null)
         {

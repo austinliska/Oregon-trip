@@ -13,7 +13,7 @@ public class User
 	{
         
         int num;
-        Console.WriteLine("/nSelect your class /n 1. Jock /n 2. Cheerleader /n 3. Nerd /n 4. Metalhead /n 5.Stoner");
+        Console.WriteLine("\nSelect your class \n 1. Jock \n 2. Cheerleader \n 3. Nerd \n 4. Metalhead \n 5.Stoner");
         num = Convert.ToInt32(Console.ReadLine());
         if (num == 1)
         {
@@ -76,9 +76,14 @@ public class User
     }
     public void set_stats(int[] change)
     {
-        foreach (int i in change)
+        if (change != null)
         {
-            stats[i] += change[i];
+            for (int i = 0; i < change.Length; i++)
+            {
+
+                stats[i] += change[i];
+
+            }
         }
     }
 

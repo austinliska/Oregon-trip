@@ -8,7 +8,7 @@ namespace Oregon_Trip
 {
     class Driver1
     {
-        public static void Driver(Event theEvent, User a)
+        public static int Driver(Event theEvent, User a)
         /*
         Function requires an int array of all stat requirements, an int array of the positive and negative changes to all stats
         Optional - the amount of money to start
@@ -78,18 +78,8 @@ namespace Oregon_Trip
             }
 
             string pq = Console.ReadLine().ToString().Trim().ToLower();
-            if (pq == "y")
-            {
-                //user said yes
-            }
-            else if (pq == "n")
-            {
-                //user said no
-            }
-            else
-            {
-                //invalid input
-            }
+            return use_path;
+            
         }
 
     }
