@@ -33,8 +33,6 @@ namespace Oregon_Trip
 
 
 
-
-
         }
     }
     class OldEvent
